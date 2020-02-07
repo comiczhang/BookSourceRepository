@@ -1,7 +1,7 @@
 {
     "name": "微信阅读",
     "url": "weread.qq.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://i.weread.qq.com/store/search?keyword=${key}",
         "list": "$.books[?(@.bookInfo.format==\"txt\")].bookInfo",
@@ -14,7 +14,7 @@
     "detail": {
         "status": "$.bookStatus@equal->2",
         "update": "$.updateTime",
-        "catalog": "/book/chapterInfos@post->${\"booksIds\":[\"${$.bookId}\"],\"synckeys\":[0]}"
+        "catalog": "/book/chapterInfos@post->{\"booksIds\":[\"${$.bookId}\"],\"synckeys\":[0]}"
     },
     "catalog": {
         "list": "$..updated[*]",
