@@ -1,3 +1,1 @@
-# BookSourceRepository
----
-##### 教程链接(https://chimisgo.gitbook.io/booksource)
+### 教程链接：https://chimisgo.gitbook.io/booksource
