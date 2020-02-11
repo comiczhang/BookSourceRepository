@@ -28,8 +28,6 @@
         "filter": [
             "#cont-text > style@match->(?<=.).+(?=\\{)"
         ],
-        "page": {
-            "url": "a:matches(下一页)"
-        }
+        "page": "a:matches(下一页)"
     }
 }

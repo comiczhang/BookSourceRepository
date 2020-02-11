@@ -25,9 +25,7 @@
         "list": "#readerlists > ul > li",
         "name": "a",
         "chapter": "a",
-        "page": {
-            "url":"div.pages > a:gt(0)"
-        }
+        "page": "div.pages > a:gt(0)"
     },
     "chapter": {
         "content": "#content"
