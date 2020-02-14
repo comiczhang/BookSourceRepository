@@ -1,7 +1,7 @@
 {
     "name": "纵横中文网",
     "url": "m.zongheng.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://m.zongheng.com/h5/ajax/search?h5=1&keywords=${key}&pageNum=1&field=all&pageCount=10",
         "list": "$.searchlist.searchBooks[*]",
@@ -30,5 +30,36 @@
         "verify": "https://m.zongheng.com/h5/home",
         "logged": ".user-modbox > a:first-child@equal->自动订阅管理",
         "vip": "$.result.message@equal->未订阅"
-    }
+    },
+    "rank": [
+        {
+            "title":"月票榜",
+            "url": "https://m.zongheng.com/h5/ajax/rank?pageNum=${page}&pageSize=10&rankType=1",
+            "page": 1,
+            "size": 10,
+            "list": "$.ranklist[*]"
+        },
+        {
+            "title":"热门榜",
+            "url": "https://m.zongheng.com/h5/ajax/rank?pageNum=${page}&pageSize=10&rankType=${key}",
+            "page": 1,
+            "size": 10,
+            "categories": [{"key": "4", "value": "男生"}, {"key": "19", "value": "女生"}],
+            "list": "$.ranklist[*]"
+        },
+        {
+            "title":"新书榜",
+            "url": "https://m.zongheng.com/h5/ajax/rank?pageNum=${page}&pageSize=10&rankType=14",
+            "page": 1,
+            "size": 10,
+            "list": "$.ranklist[*]"
+        },
+        {
+            "title":"完结榜",
+            "url": "https://m.zongheng.com/h5/ajax/rank?pageNum=${page}&pageSize=10&rankType=-1",
+            "page": 1,
+            "size": 10,
+            "list": "$.ranklist[*]"
+        }
+    ]
 }
